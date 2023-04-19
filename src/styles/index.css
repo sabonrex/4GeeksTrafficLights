@@ -14,29 +14,36 @@
     border-radius: 10px;
     padding-top: 20px;
   }
-  .bulb{
+
+  .red{
+    background-color: red;
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    margin-bottom: 7%;
+  }
+  
+  .yellow{
+    background-color: yellow;
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    margin-bottom: 7%;
+  }
+
+  .green{
+    background-color: green;
     margin: auto;
     width: 120px;
     height: 120px;
     border-radius: 100%;
   }
-  .red{
-    background-color: red;
-  }
   
-  .yellow{
-    margin-top: 10px;
-    background-color: yellow;
+  .on{
+    box-shadow: 0 0 30px #FFFFFF;
   }
-  .green{
-    margin-top: 10px;
-    background-color: green;
-  }
-  .purple{
-    margin-top: 10px;
-    background-color: purple;
-  }
-  
   .button {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -48,6 +55,4 @@
     font-size: 16px;
   }
 
-  #on{
-    box-shadow: 0 0 30px #FFFFFF;
-  }
+ 

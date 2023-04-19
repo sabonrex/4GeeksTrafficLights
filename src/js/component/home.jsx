@@ -1,36 +1,36 @@
-import React, { Component } from 'react';
+import React, {useState, useEffect} from "react";
 
-//create your first component
-class TrafficLight extends Component {
-	constructor(){
-	  super();
-		this.state = {
-		  stateRed: "off",
-		  stateYellow: "off",
-		  stateGreen: "off",
-		 
-		};
-	}
-  
-	  render(){
-		return(
-		  <div>
-			<div id="box"></div>
-			<div id="trafics">
-			  <div className= "bulb red" id= {this.state.stateRed} 
-			  onClick={()=>this.setState({stateRed: "on", stateYellow: "off", stateGreen: "off"})}>
-			  </div>
-			  <div className= "bulb yellow" id= {this.state.stateYellow} 
-			  onClick={()=>this.setState({stateRed: "off", stateYellow: "on", stateGreen: "off"})}>
-			  </div>
-			  <div className= "bulb green" id= {this.state.stateGreen} 
-			  onClick={()=>this.setState({stateRed: "off", stateYellow: "off", stateGreen: "on"})}>
-			  </div>
-			</div>
-			
-			
-		  </div>);
-	  }
-  }
-  
-  export default TrafficLight;
+const initialState = { 
+    stateRed: "",
+    stateYellow: "",
+    stateGreen: "",
+}
+
+const TrafficLight = () => {
+  const [color, setColor] = useState({initialState}); 
+
+  useEffect(() => { 
+    setColor({stateRed: "on"});
+  }, []); 
+
+  return (
+        <div>
+            <div id="box"></div>
+                <div id="trafics">
+                    <div className= {"red " + color.stateRed}
+                        onClick={() => setColor({stateRed: "on"})}>
+                    </div>
+					<div className= {"yellow " + color.stateYellow}
+                        onClick={() => setColor({stateYellow: "on"})}>
+                    </div>
+					<div className= {"green " + color.stateGreen}
+                        onClick={() => setColor({stateGreen: "on"})}>
+                    </div>
+
+        </div>
+</div>
+      
+  );
+};
+
+export default TrafficLight;
